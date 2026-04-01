@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" dir="rtl" lang="ar">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>أحمد راجح | شريك الاستثمار العقاري الاستراتيجي</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1e3a5f",
+              "primary-dark": "#0f1f33",
+              "accent": "#c9a227",
+              "accent-light": "#e8c547",
+              "accent-dark": "#9a7b1f",
+              "surface": "#fafbfc",
+              "surface-dark": "#f3f4f6",
+              "text": "#1f2937",
+              "text-muted": "#6b7280",
+              "white": "#ffffff",
+              "border": "#e5e7eb",
+            },
+            fontFamily: {
+              "cairo": ["Cairo", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(30, 58, 95, 0.08);
+      }
+      .card-hover {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px -12px rgba(30, 58, 95, 0.15);
+      }
+      .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
+        transition: all 0.3s ease;
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(30, 58, 95, 0.3);
+      }
+      .btn-accent {
+        background: linear-gradient(135deg, #c9a227 0%, #e8c547 100%);
+        color: #0f1f33;
+        transition: all 0.3s ease;
+      }
+      .btn-accent:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #1e3a5f, #c9a227);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .section-pattern {
+        background-image: radial-gradient(circle at 1px 1px, rgba(30, 58, 95, 0.06) 1px, transparent 0);
+        background-size: 28px 28px;
+      }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+      });
+    </script>
+</head>
+<body class="bg-surface font-cairo text-text antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">ر</span>
+                </div>
+                <div>
+                    <div class="text-lg font-bold text-primary">أحمد راجح</div>
+                    <div class="text-xs text-text-muted -mt-1">المدير التنفيذي</div>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors" href="#about">عن أحمد راجح</a>
+                <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors" href="#companies">عن شركات</a>
+                <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors" href="#philosophy">الفلسفة</a>
+                <a class="text-sm font-medium text-text-muted hover:text-primary transition-colors" href="#contact">تواصل</a>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <a class="hidden sm:flex items-center px-4 py-2.5 text-sm font-medium text-primary hover:bg-primary/5 rounded-lg transition-colors" href="tel:+201XX">
+                    <span class="material-symbols-outlined ml-2" style="font-size:18px">call</span>
+                    اتصل بنا
+                </a>
+                <a class="px-5 py-2.5 text-sm font-semibold btn-accent rounded-lg" href="https://wa.me/yourlink">
+                    واتساب
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-br from-surface via-surface-dark to-surface">
+        <div class="absolute inset-0 section-pattern"></div>
+        <div class="absolute top-20 left-10 w-[500px] h-[500px] bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-[400px] h-[400px] bg-gradient-to-br from-accent/5 to-primary/5 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7">
+                <div class="fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                    <span class="text-sm font-medium text-primary">الشروق، مصر</span>
+                </div>
+                
+                <h1 class="fade-up text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.3] mb-6" style="animation-delay: 0.1s">
+                    نحو مستقبل مالي<br/>
+                    <span class="text-gradient">أكثر إشراقاً مع الاستثمار العقاري</span>
+                </h1>
+                
+                <p class="fade-up text-lg text-text-muted max-w-xl mb-8 leading-relaxed" style="animation-delay: 0.2s">
+                    نوفر لك أفضل الفرص الاستثمارية في قطاع العقارات بمصر. مع خبرة واسعة ونجاحات متعددة، نساعدك على تحقيق أهدافك المالية من خلال استثمارات عقارية ذكية وآمنة.
+                </p>
+                
+                <div class="fade-up flex flex-wrap gap-4" style="animation-delay: 0.3s">
+                    <a class="px-8 py-4 btn-accent text-sm font-semibold rounded-xl inline-flex items-center gap-2" href="#contact">
+                        ابدأ استثمارك الآن
+                        <span class="material-symbols-outlined" style="font-size:18px">arrow_left</span>
+                    </a>
+                    <a class="px-8 py-4 border-2 border-primary/20 text-primary text-sm font-semibold rounded-xl hover:bg-primary/5 transition-colors inline-flex items-center gap-2" href="#companies">
+                        اعرف أكثر عن شركاتنا
+                        <span class="material-symbols-outlined" style="font-size:18px">apartment</span>
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="fade-up flex flex-wrap gap-8 mt-12 pt-8 border-t border-border" style="animation-delay: 0.4s">
+                    <div>
+                        <div class="text-3xl font-bold text-primary">18+</div>
+                        <div class="text-sm text-text-muted">سنوات خبرة</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-primary">1000+</div>
+                        <div class="text-sm text-text-muted">عميل سعيد</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5 relative hidden lg:block">
+                <div class="relative">
+                    <div class="absolute -inset-6 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 rounded-3xl"></div>
+                    <div class="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                        <img alt="أحمد راجح" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/60 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-0 right-0 left-0 p-8 bg-gradient-to-t from-primary-dark to-transparent">
+                            <div class="text-white text-xl font-bold">أحمد راجح</div>
+                            <div class="text-white/70 text-sm">شريك استراتيجي</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Ahmed Ragah Section -->
+    <section class="py-24 md:py-32 bg-white" id="about">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl"></div>
+                    <div class="relative aspect-[4/5] rounded-xl overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uh_i_CsjIjB-6shhNTVjr7JnhK95oLeq9Tue9J1IKwDT9EIWq8foMXLG2-jw8bugklBClrr3-xAM1Wq2jXAlbiCQdu-AgsAI5Z5LjjiC74Ty5zq2Q7e6cj7G58j-u6GtPvybef-7LkK-RyXrPLruhqX6uc47zNPSMnxk38omBbgwjmJ6Dog7WqU2QW3VAei0aTqZ639BRs3LzG7gt0yo0w2GuSplgrqIxYYb2xaBCfSLp-vdxGMtACCLpQ8zhW8Jjgy7e12niy9uuU"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/70 via-transparent to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="fade-up inline-block px-4 py-1.5 bg-primary/5 text-primary text-sm font-semibold tracking-wider rounded-full mb-6">
+                        عن أحمد راجح
+                    </div>
+                    <h2 class="fade-up text-4xl md:text-5xl font-bold text-primary mb-6" style="animation-delay: 0.1s">
+                        شريكك في <span class="text-gradient">الاستثمار العقاري</span>
+                    </h2>
+                    <div class="fade-up space-y-5 text-text-muted leading-relaxed" style="animation-delay: 0.2s">
+                        <p>أحمد راجح هو المدير التنفيذي لشركة الراجحي للمشاريع العمرانية، يتمتع بخبرة تزيد عن 18 عاماً في سوق العقارات المصري.</p>
+                        <p>حاصل على درجة <span class="font-bold text-primary">ماجستير إدارة الأعمال (MBA)</span> في الإدارة الاستراتيجية، يجمع بين الحدس الاستراتيجي والدقة الأكاديمية لضمان أفضل العوائد لعملائه.</p>
+                        <p>يلعب دوراً محورياً في تطوير وإدارة المشاريع العقارية والتجارية في منطقة الشروق ومصر.</p>
+                    </div>
+                    
+                    <div class="fade-up grid grid-cols-2 gap-4 mt-8" style="animation-delay: 0.3s">
+                        <div class="p-4 rounded-xl bg-surface-dark border border-border">
+                            <div class="text-2xl font-bold text-primary">18+</div>
+                            <div class="text-sm text-text-muted">سنة خبرة</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-surface-dark border border-border">
+                            <div class="text-2xl font-bold text-primary">1000+</div>
+                            <div class="text-sm text-text-muted">وحدة مباعة</div>
+                        </div>
+                    </div>
+                    
+                    <div class="fade-up mt-8 p-6 rounded-2xl bg-primary-dark text-white" style="animation-delay: 0.4s">
+                        <blockquote class="text-lg leading-relaxed">
+                            "دورنا هو اختيار الفرص التي تتجاوز السوق المباشر، لضمان أن يصبح كل استثمار ركيزة من ركائز الثروة المتوارثة لعملائنا."
+                        </blockquote>
+                        <div class="mt-4 text-accent font-semibold">— أحمد راجح</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section class="py-24 md:py-32 bg-surface-dark" id="companies">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="fade-up inline-block px-4 py-1.5 bg-primary/5 text-primary text-sm font-semibold tracking-wider rounded-full mb-4">
+                    شركاتنا
+                </div>
+                <h2 class="fade-up text-4xl md:text-5xl font-bold text-primary mb-6" style="animation-delay: 0.1s">
+                    عن <span class="text-gradient">شركات</span>
+                </h2>
+                <p class="fade-up text-text-muted text-lg max-w-2xl mx-auto" style="animation-delay: 0.2s">
+                    أحمد راجح شريك في أكثر من شركة رائدة في مجال التطوير العقاري والتجاري، حيث يلعب دوراً محورياً في تطوير وإدارة الأعمال العقارية والاستثمارية.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="fade-up p-8 rounded-2xl bg-white border border-border card-hover" style="animation-delay: 0.1s">
+                    <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl text-primary" style="font-size:32px">business</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">شركة الراجحي للمشاريع العمرانية</h3>
+                    <p class="text-text-muted leading-relaxed">تعمل في مجال التطوير العقاري والمششاريع العمرانية، تهتم ببناء وإدارة المشاريع السكنية والتجارية، ولديها خبرة في تنفيذ مشاريع عمرانية متكاملة.</p>
+                </div>
+                
+                <div class="fade-up p-8 rounded-2xl bg-white border border-border card-hover" style="animation-delay: 0.2s">
+                    <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl text-accent" style="font-size:32px">store</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">شركة بروة للمشاريع التجارية</h3>
+                    <p class="text-text-muted leading-relaxed">تعمل في مجال المشروعات التجارية والاستثمارية، تركز على تطوير المولات والمباني التجارية، تهدف إلى تقديم حلول استثمارية وتجارية حديثة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="py-24 md:py-32 bg-primary-dark text-white relative overflow-hidden" id="philosophy">
+        <div class="absolute inset-0 opacity-5">
+            <div class="w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, #c9a227 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="fade-up inline-block px-4 py-1.5 bg-accent/20 text-accent text-sm font-semibold tracking-wider rounded-full mb-4">
+                    فلسفتنا
+                </div>
+                <h2 class="fade-up text-4xl md:text-5xl font-bold mb-6" style="animation-delay: 0.1s">
+                    لماذا تختار <span class="text-accent">راجح</span>
+                </h2>
+                <p class="fade-up text-white/60 text-lg max-w-2xl mx-auto" style="animation-delay: 0.2s">
+                    نؤمن أن الاستثمار العقاري الناجح يتطلب أكثر من رأس المال - يحتاج رؤية استراتيجية وشفافية تامة.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="fade-up p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/30 transition-colors card-hover" style="animation-delay: 0.1s">
+                    <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl text-accent" style="font-size:32px">visibility</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">شفافية مطلقة</h3>
+                    <p class="text-white/60 leading-relaxed">نكشف لك كل التفاصيل - من اتجاهات السوق إلى المخاطر الكامنة. لأن ثقتكم هي أساس شراكتنا.</p>
+                </div>
+                
+                <div class="fade-up p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/30 transition-colors card-hover" style="animation-delay: 0.2s">
+                    <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl text-accent" style="font-size:32px">insights</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">رؤية استراتيجية</h3>
+                    <p class="text-white/60 leading-relaxed">نستخدم بيانات السوق الدقيقة لتحديد مناطق النمو المرتفع قبل أن يصلها الجميع.</p>
+                </div>
+                
+                <div class="fade-up p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/30 transition-colors card-hover" style="animation-delay: 0.3s">
+                    <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl text-accent" style="font-size:32px">account_balance</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">قيمة مستدامة</h3>
+                    <p class="text-white/60 leading-relaxed">نركز على الندرة المعمارية والموقع لضمان نمو أصولكم عبر العقود، وليس المواسم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-24 md:py-32 bg-white" id="contact">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="fade-up inline-block px-4 py-1.5 bg-primary/5 text-primary text-sm font-semibold tracking-wider rounded-full mb-4">
+                    تواصل معنا
+                </div>
+                <h2 class="fade-up text-4xl md:text-5xl font-bold text-primary mb-6" style="animation-delay: 0.1s">
+                    ابدأ <span class="text-gradient">رحلتك العقارية</span>
+                </h2>
+                <p class="fade-up text-text-muted text-lg" style="animation-delay: 0.2s">جاهز لمناقشة خطوتك التالية؟ تواصل مع مكتبنا للحصول على تقييم سري.</p>
+            </div>
+            
+            <div class="fade-up grid grid-cols-1 md:grid-cols-3 gap-6 mb-12" style="animation-delay: 0.3s">
+                <div class="flex items-center gap-4 p-6 rounded-2xl bg-surface-dark border border-border">
+                    <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-2xl">call</span>
+                    </div>
+                    <div>
+                        <div class="text-xs text-text-muted uppercase tracking-wider mb-1">الهاتف</div>
+                        <div class="text-primary font-semibold" dir="ltr">+20 1XX XXX XXXX</div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-4 p-6 rounded-2xl bg-surface-dark border border-border">
+                    <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-2xl">mail</span>
+                    </div>
+                    <div>
+                        <div class="text-xs text-text-muted uppercase tracking-wider mb-1">البريد</div>
+                        <div class="text-primary font-semibold">info@rajah.com</div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-4 p-6 rounded-2xl bg-surface-dark border border-border">
+                    <div class="w-14 h-14 rounded-xl bg-primary/5 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-2xl">location_on</span>
+                    </div>
+                    <div>
+                        <div class="text-xs text-text-muted uppercase tracking-wider mb-1">الموقع</div>
+                        <div class="text-primary font-semibold">الشروق، مصر</div>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="fade-up space-y-6 p-8 md:p-12 rounded-3xl bg-surface-dark border border-border" style="animation-delay: 0.4s">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-text-muted text-sm mb-2 font-medium">الاسم الكامل</label>
+                        <input class="w-full bg-white border border-border rounded-xl px-5 py-4 text-text focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all" placeholder="أدخل اسمك" type="text"/>
+                    </div>
+                    <div>
+                        <label class="block text-text-muted text-sm mb-2 font-medium">رقم الهاتف</label>
+                        <input class="w-full bg-white border border-border rounded-xl px-5 py-4 text-text focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all" placeholder="+20" type="tel"/>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-text-muted text-sm mb-2 font-medium">غرض التواصل</label>
+                    <select class="w-full bg-white border border-border rounded-xl px-5 py-4 text-text focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all">
+                        <option>شراء عقار</option>
+                        <option>استشارة استثمارية</option>
+                        <option>بيع عقار</option>
+                        <option>استفسار آخر</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-text-muted text-sm mb-2 font-medium">الرسالة</label>
+                    <textarea class="w-full bg-white border border-border rounded-xl px-5 py-4 text-text focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all h-32 resize-none" placeholder="كيف يمكننا مساعدتك؟"></textarea>
+                </div>
+                <button class="w-full py-5 btn-primary text-white font-semibold rounded-xl text-lg hover:opacity-90 transition-all flex items-center justify-center gap-2" type="submit">
+                    <span>إرسال الرسالة</span>
+                    <span class="material-symbols-outlined">send</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-primary-dark text-white border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center">
+                        <span class="text-primary-dark font-bold text-xl">ر</span>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold">راجح</div>
+                        <div class="text-xs text-white/50">للاستثمار العقاري</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a class="text-sm text-white/60 hover:text-accent transition-colors" href="#about">عن راجح</a>
+                    <a class="text-sm text-white/60 hover:text-accent transition-colors" href="#projects">المشاريع</a>
+                    <a class="text-sm text-white/60 hover:text-accent transition-colors" href="#philosophy">الفلسفة</a>
+                    <a class="text-sm text-white/60 hover:text-accent transition-colors" href="#contact">تواصل</a>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-colors" href="#">
+                        <span class="material-symbols-outlined" style="font-size:18px">chat</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:border-accent hover:text-accent transition-colors" href="#">
+                        <span class="material-symbols-outlined" style="font-size:18px">share</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/10 text-center">
+                <p class="text-white/40 text-sm">© 2024 راجح للاستثمار العقاري. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
